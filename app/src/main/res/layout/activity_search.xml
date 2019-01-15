@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mLlContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/mIcSearch"
+        layout="@layout/common_search" />
+
+    <include
+        android:id="@+id/mIcHotKey"
+        layout="@layout/common_icon_title" />
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/mTagFlowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/mIcHistory"
+        layout="@layout/common_icon_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mRvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/mSrlRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRvArticle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>
